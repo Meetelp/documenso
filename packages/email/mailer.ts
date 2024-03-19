@@ -43,6 +43,7 @@ const getTransport = () => {
   }
 
   return createTransport({
+    service: "Gmail",
     host: process.env.NEXT_PRIVATE_SMTP_HOST ?? 'localhost:2500',
     port: Number(process.env.NEXT_PRIVATE_SMTP_PORT) || 587,
     secure: process.env.NEXT_PRIVATE_SMTP_SECURE === 'true',
